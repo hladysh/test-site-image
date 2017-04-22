@@ -1,0 +1,113 @@
+/* 1. FONTS */
+/* ================================================ */
+
+@font-face
+	font-family: "Tahoma"
+	src : url("../fonts/Tahoma.ttf")
+@font-face
+	font-family: "TahomaBold"
+	src : url("../fonts/TahomaBold.ttf")
+	font-weight: 700
+@font-face
+	font-family: "TimesNewRoman"
+	src : url("../fonts/TimesNewRoman.ttf")
+
+/* 1. ICONS ================== */
+.ic 
+	position: relative
+	display: inline-block
+	vertical-align: middle
+	background: $icons no-repeat
+
+
+@each $i in attendance, profit, sales, stability
+	.icon-#{$i}
+		+s(icon-#{$i})
+
+
+/* 2. BUTTON ================== */
+
+body 
+	color: #000
+	font-family: Tahoma, sans-serif
+	font-weight: 400
+
+.btn, a.btn 
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+
+	+tr(all 0.2s linear)
+	background: transparent
+	border: none 
+
+input[type="submit"].btn, button.btn
+	padding-top: 0
+
+
+/* 3. CONTENT ================== */
+#main
+	background-color: #FFF
+.container
+	width: 1200px
+	margin-left: auto
+	margin-right: auto
+.content-wrap
+	margin : 80px 180px 90px 180px
+	.bloc-title
+		height: 270px
+		width: 100%	
+		padding: 20px 30px
+		background-color: #f0f0f0
+		& img
+			display: block
+			float: left
+			margin-right: 22px
+.title-decr 			
+	& .title-top
+		margin-right: 4%
+		font-size: 21px
+		font-family: "TahomaBold", sans-serif
+		line-height: 25px
+	& .post-descr	
+		margin: 10px 0
+	& .btn-more
+		color: #fefefe
+		padding : 10px 25px
+		font-size: 13px
+		background-color: #da4137
+		background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%)
+		background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%)
+		background-image: linear-gradient(to top, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0) 100%)
+.post-title
+	margin: 25px 0 10px
+	font-size: 18px
+	font-family: "TahomaBold", sans-serif
+	line-height: 19px
+	clear: both
+.post-descr
+	color: #8d8d8d
+	font-family: "Times New Roman", sans-serif
+	font-size: 14px
+	line-height: 20px	
+.benefit-item
+	float: left
+	width: 25%
+	margin: 25px 0 45px
+	+vertical 
+	& .ic
+		margin: 0 10px
+	& span
+		display: inline-block
+		font-size: 14px
+		font-style: italic
+		line-height: 18px
+		font-family: "Times New Roman", sans-serif
+		vertical-align: middle
+
+/* 5. MEDIA ================== */
+
+
+
+
+
